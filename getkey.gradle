@@ -1,0 +1,9 @@
+Properties project_props = new Properties()
+try {
+    project_props.load(file('project.properties').newDataInputStream())
+} catch (Exception ex) {
+    throw new GradleException("Missing project.properties file");
+}
+
+ext.client_id = project_props.getProperty('client_id')
+ext.client_secret = project_props.getProperty('client_secret')

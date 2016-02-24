@@ -1,0 +1,53 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: 'getkey.gradle'
+
+buildscript {
+    ext.compileSdkVersion_ver = 23
+    ext.buildToolsVersion_ver = '23.0.2'
+
+    ext.minSdkVersion_ver = 21
+    ext.targetSdkVersion_ver = 23
+    ext.versionCode_ver = 1
+    ext.versionName_ver = '1.0'
+
+    ext.support_ver = '23.1.1'
+
+    ext.glide_ver = '3.6.1'
+    ext.retrofit_ver = '2.0.0-beta4'
+    ext.gson_ver = '2.6.1'
+    ext.okhttp_ver = '3.1.2'
+    ext.rxjava_ver = '1.1.1'
+    ext.rxandroid_ver = '1.1.0'
+
+    ext.kotlin_ver = '1.0.0'
+    ext.anko_ver = '0.8.2'
+
+    ext.junit_ver = '4.12'
+    ext.runner_ver = '0.4'
+    ext.espresso_ver = '2.2.1'
+    ext.mockito_ver = '1.10.19'
+    ext.dexmaker_ver = '1.2'
+
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.0.0-beta5'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_ver"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
