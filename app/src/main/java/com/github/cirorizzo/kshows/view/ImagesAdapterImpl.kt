@@ -15,7 +15,7 @@ class ImagesAdapterImpl : RecyclerView.Adapter<ImagesURLsDataHolder>(), ImagesAd
 
     private var cats: Cats? = null
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImagesURLsDataHolder? {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImagesURLsDataHolder {
         return ImagesURLsDataHolder(
                 LayoutInflater.from(parent.getContext()).inflate(R.layout.row_card_view, parent, false))
     }
