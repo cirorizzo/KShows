@@ -2,14 +2,13 @@ package com.github.cirorizzo.kshows.view
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.StaggeredGridLayoutManager
 import com.github.cirorizzo.kshows.KShowsApplication
 import com.github.cirorizzo.kshows.R
 import com.github.cirorizzo.kshows.presenter.MasterPresenterImpl
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), MainActivityInterface {
-    private var containerRecyclerView: RecyclerView? = null
     private val imagesAdapterImpl: ImagesAdapterImpl by lazy { ImagesAdapterImpl() }
 
     private val masterPresenterImpl: MasterPresenterImpl
@@ -27,8 +26,8 @@ class MainActivity : AppCompatActivity(), MainActivityInterface {
     }
 
     private fun initRecyclerView() {
-        containerRecyclerView?.setLayoutManager(StaggeredGridLayoutManager(3, 1))
-        containerRecyclerView?.setAdapter(imagesAdapterImpl)
+        containerRecyclerView.setLayoutManager(StaggeredGridLayoutManager(3, 1))
+        containerRecyclerView.setAdapter(imagesAdapterImpl)
     }
 
     private fun connectingToMasterPresenter() {
