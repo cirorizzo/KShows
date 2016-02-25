@@ -8,11 +8,11 @@ import rx.Observable
 
 
 class MasterPresenterImpl : MasterPresenter {
-    lateinit private var mainActivity: MainActivityInterface
+    lateinit private var mainActivityInterface: MainActivityInterface
     lateinit private var imagesAdapter: ImagesAdapter
 
-    override fun connect(mainActivity: MainActivityInterface, imagesAdapter: ImagesAdapter) {
-        this.mainActivity = mainActivity
+    override fun connect(mainActivityInterface: MainActivityInterface, imagesAdapter: ImagesAdapter) {
+        this.mainActivityInterface = mainActivityInterface
         this.imagesAdapter = imagesAdapter
     }
 

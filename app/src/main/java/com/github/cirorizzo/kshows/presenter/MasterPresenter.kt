@@ -7,7 +7,7 @@ import rx.Observable
 
 
 interface MasterPresenter {
-    fun connect(mainActivity: MainActivityInterface, imagesAdapter: ImagesAdapter)
+    fun connect(mainActivityInterface: MainActivityInterface, imagesAdapter: ImagesAdapter)
     fun getMasterRequest()
     fun getObservableMasterRequest(): Observable<Cats>
 }
