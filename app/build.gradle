@@ -55,7 +55,6 @@ dependencies {
     compile "com.github.bumptech.glide:glide:$glide_ver"
 
     compile "com.squareup.retrofit2:retrofit:$retrofit_ver"
-    compile "com.squareup.retrofit2:converter-gson:$retrofit_ver"
     compile ("com.squareup.retrofit2:converter-simplexml:$retrofit_ver") {
         exclude module: 'xpp3'
         exclude group: 'stax'
