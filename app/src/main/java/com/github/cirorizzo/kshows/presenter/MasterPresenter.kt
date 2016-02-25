@@ -9,5 +9,5 @@ import rx.Observable
 interface MasterPresenter {
     fun connect(mainActivity: MainActivityInterface, imagesAdapter: ImagesAdapter)
     fun getMasterRequest()
-    fun getObservableMasterRequest(): Observable<Cats>?
+    fun getObservableMasterRequest(): Observable<Cats>
 }

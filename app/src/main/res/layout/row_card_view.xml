@@ -15,6 +15,7 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:gravity="center"
         android:foregroundGravity="center">
 
@@ -24,7 +25,8 @@
             android:id="@+id/imgVw_cat"
             android:padding="4dp"
             android:layout_centerInParent="true"
-            android:scaleType="centerCrop" />
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/cat_image" />
 
     </RelativeLayout>
 

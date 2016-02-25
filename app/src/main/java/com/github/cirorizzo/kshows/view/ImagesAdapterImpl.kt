@@ -17,7 +17,7 @@ class ImagesAdapterImpl : RecyclerView.Adapter<ImagesURLsDataHolder>(), ImagesAd
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImagesURLsDataHolder {
         return ImagesURLsDataHolder(
-                LayoutInflater.from(parent.getContext()).inflate(R.layout.row_card_view, parent, false))
+                LayoutInflater.from(parent.context).inflate(R.layout.row_card_view, parent, false))
     }
 
     override fun getItemCount(): Int {
@@ -36,7 +36,6 @@ class ImagesAdapterImpl : RecyclerView.Adapter<ImagesURLsDataHolder>(), ImagesAd
         observableCats.subscribe(object : Subscriber<Cats>() {
             override fun onNext(cats: Cats?) {
                 Log.d(TAG, "onNextNew")
-                //cats?.data?.images?.forEach { Log.d(TAG, it.url) }
                 setData(cats)
             }
 
