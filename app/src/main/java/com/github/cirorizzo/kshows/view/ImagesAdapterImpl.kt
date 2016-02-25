@@ -25,7 +25,7 @@ class ImagesAdapterImpl : RecyclerView.Adapter<ImagesURLsDataHolder>(), ImagesAd
     }
 
     override fun onBindViewHolder(holder: ImagesURLsDataHolder, position: Int) {
-        holder?.bindImages(cats?.data?.images?.get(position)?.url ?: "")
+        holder.bindImages(cats?.data?.images?.get(position)?.url ?: "")
     }
 
     private fun setData(cats: Cats?) {
