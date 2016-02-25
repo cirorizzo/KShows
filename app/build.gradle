@@ -27,6 +27,7 @@ android {
         versionName "$versionName_ver"
 
     }
+
     buildTypes {
         debug {
             buildConfigField("int", "MAX_IMAGES_PER_REQUEST", "50")
