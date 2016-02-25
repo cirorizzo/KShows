@@ -17,7 +17,7 @@ class ImagesURLsDataHolder(view: View) : RecyclerView.ViewHolder(view) {
                 load(imgURL).
                 placeholder(R.mipmap.document_image_cancel).
 //                diskCacheStrategy(DiskCacheStrategy.ALL).
-                fitCenter().
+                centerCrop().
                 into(itemView.imgVw_cat)
     }
 }
