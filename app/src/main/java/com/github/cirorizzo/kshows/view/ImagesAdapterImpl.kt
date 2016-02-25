@@ -36,7 +36,8 @@ class ImagesAdapterImpl : RecyclerView.Adapter<ImagesURLsDataHolder>(), ImagesAd
         observableCats.subscribe(object : Subscriber<Cats>() {
             override fun onNext(cats: Cats?) {
                 Log.d(TAG, "onNextNew")
-                cats?.data?.images?.forEach { Log.d(TAG, it.url) }
+                //cats?.data?.images?.forEach { Log.d(TAG, it.url) }
+                setData(cats)
             }
 
             override fun onCompleted() {
