@@ -18,14 +18,12 @@ class MasterPresenterImpl : MasterPresenter {
 
 
     override fun getMasterRequest() {
-        val catAPINetwork = CatAPINetwork()
-        catAPINetwork.getExec()
-        imagesAdapter.setObservable(getObservableMasterRequest())
+        imagesAdapter.setObservable(getObservableMasterRequest(CatAPINetwork()))
     }
 
 
-    override fun getObservableMasterRequest(): Observable<Cats> {
-        return CatAPINetwork().getExec()
+    private fun getObservableMasterRequest(catAPINetwork: CatAPINetwork): Observable<Cats> {
+        return catAPINetwork.getExec()
     }
 
 
