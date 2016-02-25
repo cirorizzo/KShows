@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity(), MainActivityInterface {
     }
 
     private fun initRecyclerView() {
-        containerRecyclerView.layoutManager = GridLayoutManager(this, 1) //StaggeredGridLayoutManager(2, 1) //GridLayoutManager(this, 2)
+        containerRecyclerView.layoutManager = GridLayoutManager(this, 1)
         containerRecyclerView.adapter = imagesAdapterImpl
     }
 
