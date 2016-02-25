@@ -3,11 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    tools:context=".view.MainActivity">
+    tools:context=".view.MainActivity"
+    android:gravity="center">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/containerRecyclerView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:scrollbars="vertical" />
+        android:scrollbars="vertical"
+        android:layout_centerInParent="true" />
 </RelativeLayout>

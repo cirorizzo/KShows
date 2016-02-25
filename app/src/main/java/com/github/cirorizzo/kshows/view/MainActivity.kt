@@ -2,7 +2,7 @@ package com.github.cirorizzo.kshows.view
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.StaggeredGridLayoutManager
+import android.support.v7.widget.GridLayoutManager
 import com.github.cirorizzo.kshows.KShowsApplication
 import com.github.cirorizzo.kshows.R
 import com.github.cirorizzo.kshows.presenter.MasterPresenterImpl
@@ -26,8 +26,8 @@ class MainActivity : AppCompatActivity(), MainActivityInterface {
     }
 
     private fun initRecyclerView() {
-        containerRecyclerView.setLayoutManager(StaggeredGridLayoutManager(3, 1))
-        containerRecyclerView.setAdapter(imagesAdapterImpl)
+        containerRecyclerView.layoutManager = GridLayoutManager(this, 2)//StaggeredGridLayoutManager(3, 1))
+        containerRecyclerView.adapter = imagesAdapterImpl
     }
 
     private fun connectingToMasterPresenter() {

@@ -29,7 +29,7 @@ android {
     }
     buildTypes {
         debug {
-            buildConfigField("int", "MAX_IMAGES_PER_REQUEST", "10")
+            buildConfigField("int", "MAX_IMAGES_PER_REQUEST", "50")
             debuggable true
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'

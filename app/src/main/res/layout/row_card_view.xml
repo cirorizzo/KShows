@@ -7,16 +7,16 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     card_view:cardCornerRadius="4dp"
-    android:paddingBottom="10dp"
-    android:paddingTop="10dp"
-    android:layout_marginTop="5dp"
-    android:layout_marginBottom="5dp"
+    android:layout_margin="16dp"
     android:background="@android:color/transparent"
-    android:layout_centerInParent="true">
+    android:layout_centerInParent="true"
+    android:elevation="4dp">
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:foregroundGravity="center">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -24,7 +24,7 @@
             android:id="@+id/imgVw_cat"
             android:padding="4dp"
             android:layout_centerInParent="true"
-            android:foregroundGravity="fill" />
+            android:scaleType="centerCrop" />
 
     </RelativeLayout>
 

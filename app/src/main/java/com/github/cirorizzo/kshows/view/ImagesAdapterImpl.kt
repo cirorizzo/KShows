@@ -28,7 +28,7 @@ class ImagesAdapterImpl : RecyclerView.Adapter<ImagesURLsDataHolder>(), ImagesAd
         holder?.bindImages(cats?.data?.images?.get(position)?.url ?: "")
     }
 
-    override fun setData(cats: Cats?) {
+    private fun setData(cats: Cats?) {
         this.cats = cats
     }
 

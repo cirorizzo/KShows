@@ -5,6 +5,5 @@ import rx.Observable
 
 
 interface ImagesAdapter {
-    fun setData(cats: Cats?)
     fun setObservable(observableCats: Observable<Cats>)
 }
