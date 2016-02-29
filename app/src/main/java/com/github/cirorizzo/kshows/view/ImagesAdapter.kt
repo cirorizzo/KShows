@@ -6,4 +6,5 @@ import rx.Observable
 
 interface ImagesAdapter {
     fun setObservable(observableCats: Observable<Cats>)
+    fun unsubscribe()
 }

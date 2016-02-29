@@ -25,6 +25,11 @@ class MainActivity : AppCompatActivity(), MainActivityInterface {
         getURLs()
     }
 
+    override fun onDestroy() {
+        imagesAdapterImpl.unsubscribe()
+        super.onDestroy()
+    }
+
     private fun initRecyclerView() {
         containerRecyclerView.layoutManager = GridLayoutManager(this, 1)
         containerRecyclerView.adapter = imagesAdapterImpl
