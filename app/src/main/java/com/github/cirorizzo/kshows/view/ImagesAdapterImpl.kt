@@ -26,7 +26,7 @@ class ImagesAdapterImpl : RecyclerView.Adapter<ImagesAdapterImpl.ImagesURLsDataH
     }
 
     override fun getItemCount(): Int {
-        return this.cats?.data?.images?.size ?: 0
+        return cats?.data?.images?.size ?: 0
     }
 
     override fun onBindViewHolder(holder: ImagesURLsDataHolder, position: Int) {
@@ -38,9 +38,7 @@ class ImagesAdapterImpl : RecyclerView.Adapter<ImagesAdapterImpl.ImagesURLsDataH
     }
 
     override fun setObservable(observableCats: Observable<Cats>) {
-        if (subscriber.isUnsubscribed) {
-            observableCats.subscribe(subscriber)
-        }
+        observableCats.subscribe(subscriber)
     }
 
     override fun unsubscribe() {
@@ -70,14 +68,15 @@ class ImagesAdapterImpl : RecyclerView.Adapter<ImagesAdapterImpl.ImagesURLsDataH
 
     class ImagesURLsDataHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-        fun bindImages(imgURL: String) = itemView.apply {
-            Glide.with(context).
+        fun bindImages(imgURL: String) {
+            Glide.with(itemView.context).
                     load(imgURL).
                     placeholder(R.mipmap.document_image_cancel).
                     diskCacheStrategy(DiskCacheStrategy.ALL).
                     centerCrop().
-                    into(imgVw_cat)
+                    into(itemView.imgVw_cat)
         }
+
     }
 
 }
