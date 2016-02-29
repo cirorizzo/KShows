@@ -8,7 +8,7 @@ ext.versionName_ver = '1.0'
 
 ext.support_ver = '23.1.1'
 
-ext.glide_ver = '3.6.1'
+ext.glide_ver = '3.7.0'
 ext.retrofit_ver = '2.0.0-beta4'
 ext.gson_ver = '2.6.1'
 ext.okhttp_ver = '3.1.2'
