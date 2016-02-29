@@ -70,13 +70,13 @@ class ImagesAdapterImpl : RecyclerView.Adapter<ImagesAdapterImpl.ImagesURLsDataH
 
     class ImagesURLsDataHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-        fun bindImages(imgURL: String) {
-            Glide.with(itemView.context).
+        fun bindImages(imgURL: String) = itemView.apply {
+            Glide.with(context).
                     load(imgURL).
                     placeholder(R.mipmap.document_image_cancel).
                     diskCacheStrategy(DiskCacheStrategy.ALL).
                     centerCrop().
-                    into(itemView.imgVw_cat)
+                    into(imgVw_cat)
         }
     }
 
