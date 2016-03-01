@@ -1,4 +1,5 @@
 buildscript {
+    ext.kotlin_version = '1.0.0'
 
     apply from: 'versions.gradle'
 
@@ -8,6 +9,7 @@ buildscript {
 
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_ver"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
@@ -44,6 +46,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
 }
 
 dependencies {
@@ -60,8 +65,7 @@ dependencies {
         exclude module: 'xpp3'
         exclude group: 'stax'
     }
-    compile "com.google.code.gson:gson:$gson_ver"
-    compile "com.squareup.okhttp3:okhttp:$okhttp_ver"
+
     compile "io.reactivex:rxjava:$rxjava_ver"
     compile "io.reactivex:rxandroid:$rxandroid_ver"
     compile "com.squareup.retrofit2:adapter-rxjava:$retrofit_ver"
@@ -77,8 +81,13 @@ dependencies {
     androidTestCompile "com.google.dexmaker:dexmaker:$dexmaker_ver"
     androidTestCompile "com.google.dexmaker:dexmaker-mockito:$dexmaker_ver"
     androidTestCompile "org.mockito:mockito-core:$mockito_ver"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 
 configurations.all {
     resolutionStrategy.force "com.android.support:support-annotations:$support_ver"
+}
+
+repositories {
+    mavenCentral()
 }
