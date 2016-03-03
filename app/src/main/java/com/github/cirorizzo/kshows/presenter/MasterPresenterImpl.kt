@@ -5,6 +5,7 @@ import com.github.cirorizzo.kshows.network.CatAPINetwork
 import com.github.cirorizzo.kshows.view.ImagesAdapter
 import com.github.cirorizzo.kshows.view.MainActivityInterface
 import rx.Observable
+import kotlin.jvm.internal.iterator
 
 
 class MasterPresenterImpl : MasterPresenter {

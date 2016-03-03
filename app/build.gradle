@@ -8,7 +8,6 @@ buildscript {
     }
 
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_ver"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -71,7 +70,7 @@ dependencies {
     compile "com.squareup.retrofit2:adapter-rxjava:$retrofit_ver"
 
 
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_ver"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile "org.jetbrains.anko:anko-common:$anko_ver"
 
     androidTestCompile "com.android.support.test:runner:$runner_ver"
