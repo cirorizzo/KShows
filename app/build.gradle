@@ -17,7 +17,6 @@ buildscript {
     ext.rxjava_ver = '1.1.1'
     ext.rxandroid_ver = '1.1.0'
 
-
     ext.junit_ver = '4.12'
 
     repositories {

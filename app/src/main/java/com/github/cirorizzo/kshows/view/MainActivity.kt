@@ -8,7 +8,7 @@ import com.github.cirorizzo.kshows.R
 import com.github.cirorizzo.kshows.presenter.MasterPresenterImpl
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(), MainActivityInterface {
+class MainActivity : AppCompatActivity() {
     private val imagesAdapterImpl: ImagesAdapterImpl by lazy { ImagesAdapterImpl() }
 
     private val masterPresenterImpl: MasterPresenterImpl
@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity(), MainActivityInterface {
     }
 
     private fun connectingToMasterPresenter() {
-        masterPresenterImpl.connect(this, imagesAdapterImpl)
+        masterPresenterImpl.connect(imagesAdapterImpl)
     }
 
     private fun getURLs() {
