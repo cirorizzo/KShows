@@ -1,14 +1,31 @@
 buildscript {
-    ext.kotlin_version = '1.0.0'
+    ext.compileSdkVersion_ver = 23
+    ext.buildToolsVersion_ver = '23.0.2'
 
-    apply from: 'versions.gradle'
+    ext.minSdkVersion_ver = 21
+    ext.targetSdkVersion_ver = 23
+    ext.versionCode_ver = 1
+    ext.versionName_ver = '1.0'
+
+    ext.support_ver = '23.1.1'
+
+    ext.kotlin_ver = '1.0.0'
+    ext.anko_ver = '0.8.2'
+
+    ext.glide_ver = '3.7.0'
+    ext.retrofit_ver = '2.0.0-beta4'
+    ext.rxjava_ver = '1.1.1'
+    ext.rxandroid_ver = '1.1.0'
+
+
+    ext.junit_ver = '4.12'
 
     repositories {
         mavenCentral()
     }
 
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_ver"
     }
 }
 
@@ -70,17 +87,8 @@ dependencies {
     compile "com.squareup.retrofit2:adapter-rxjava:$retrofit_ver"
 
 
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_ver"
     compile "org.jetbrains.anko:anko-common:$anko_ver"
-
-    androidTestCompile "com.android.support.test:runner:$runner_ver"
-    androidTestCompile "com.android.support.test:rules:$runner_ver"
-    androidTestCompile "com.android.support.test.espresso:espresso-core:$espresso_ver"
-    androidTestCompile "com.android.support.test.espresso:espresso-intents:$espresso_ver"
-    androidTestCompile "com.google.dexmaker:dexmaker:$dexmaker_ver"
-    androidTestCompile "com.google.dexmaker:dexmaker-mockito:$dexmaker_ver"
-    androidTestCompile "org.mockito:mockito-core:$mockito_ver"
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 
 configurations.all {
