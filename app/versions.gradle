@@ -10,12 +10,9 @@ ext.support_ver = '23.1.1'
 
 ext.glide_ver = '3.7.0'
 ext.retrofit_ver = '2.0.0-beta4'
-ext.gson_ver = '2.6.1'
-ext.okhttp_ver = '3.1.2'
 ext.rxjava_ver = '1.1.1'
 ext.rxandroid_ver = '1.1.0'
 
-ext.kotlin_ver = '1.0.0'
 ext.anko_ver = '0.8.2'
 
 ext.junit_ver = '4.12'
