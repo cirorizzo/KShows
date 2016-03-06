@@ -9,7 +9,6 @@ Libraries used
 * [Cardview](http://developer.android.com/reference/android/support/v7/widget/CardView.html)
 * [Recyclerview](http://developer.android.com/reference/* android/support/v7/widget/RecyclerView.html)
 * [Retrofit2](http://square.github.io/retrofit/)
-* [OkHttp3](http://square.github.io/okhttp/)
 * [Glide](https://github.com/bumptech/glide)
 * [RxJava](https://github.com/ReactiveX/RxJava)
 * [RxAndroid](https://github.com/ReactiveX/RxAndroid)

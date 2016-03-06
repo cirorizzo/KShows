@@ -22,6 +22,4 @@ class MasterPresenterImpl : MasterPresenter {
     private fun getObservableMasterRequest(catAPINetwork: CatAPINetwork): Observable<Cats> {
         return catAPINetwork.getExec()
     }
-
-
 }
